@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Friends</title>
+  <link rel="stylesheet" href="Friends.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="header-left">
+      <img src="assets/images/logo.png" alt="Logo" class="site-logo">
+      <h1 class="page-title">MatchPoint</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Main Page</a></li>
+        <li><a href="Friends.html">Friends</a></li>
+        <li><a href="Book_a_court.html">Book a Court</a></li>
+        <li><a href="History_matches.html">History Matches</a></li>
+        <li><a href="Profile.html">Profile</a></li>
+        <li><a href="Match_making.html">Matchmaking</a></li>
+        <li><a href="My_Bookings.html">My Bookings</a></li>
+      </ul>
+    </nav>
+    <button id="logoutBtn" class="logout-button">Logout</button>
+  </header>
+
+  <div class="navbar-underline"></div>
+
+  <main class="main-content">
+    <div class="container">
+      <h1>👥 Friends</h1>
+
+      <!-- Filter Section -->
+      <div class="form-group">
+        <label for="filterId">Player ID:</label>
+        <input type="number" id="filterId" placeholder="Player ID">
+
+        <label for="filterName">Player Name:</label>
+        <input type="text" id="filterName" placeholder="Player Name">
+
+        <label for="filterLocation">Location:</label>
+        <input type="text" id="filterLocation" placeholder="Location">
+      </div>
+
+
+
+      <div class="search-reset-buttons">
+        <button id="searchFriendsBtn">🔍 Search</button>
+        <button id="resetFiltersBtn">♻️ Reset</button>
+      </div>
+      
+      
+
+      <!-- Friends Table -->
+      <table>
+        <thead>
+          <tr>
+            <th>Player ID</th>
+            <th>Player Name</th>
+            <th>Location</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="friendsTableBody">
+          <!-- Filled dynamically -->
+        </tbody>
+      </table>
+
+      <!-- Pagination -->
+      <div class="form-group">
+        <label for="rowCount">Show Rows:</label>
+        <select id="rowCount">
+          <option value="1">1</option>
+          <option value="5" selected>5</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="all">All</option>
+        </select>
+      </div>
+
+      <div class="pagination">
+        <button id="prevPageBtn">&#8592; Previous</button>
+        <span id="pageInfo">Page 1</span>
+        <button id="nextPageBtn">Next &#8594;</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div id="customModal" class="modal-overlay">
+    <div class="modal-box">
+      <p id="modalMessage"></p>
+      <button id="closeModalBtn">Close</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 MatchPoint. All Rights Reserved.</p>
+  </footer>
+
+  <script src="friends.js"></script>
+</body>
+</html>

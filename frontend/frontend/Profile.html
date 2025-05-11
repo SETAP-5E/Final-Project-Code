@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile</title>
+  <link rel="stylesheet" href="Profile.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="header-left">
+      <img src="assets/images/logo.png" alt="Logo" class="site-logo" />
+      <h1 class="page-title">MatchPoint</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Main Page</a></li>
+        <li><a href="Friends.html">Friends</a></li>
+        <li><a href="Book_a_court.html">Book a Court</a></li>
+        <li><a href="History_matches.html">History Matches</a></li>
+        <li><a href="Profile.html" class="active">Profile</a></li>
+        <li><a href="Match_making.html">Matchmaking</a></li>
+        <li><a href="My_Bookings.html">My Bookings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Underline -->
+  <div class="navbar-underline"></div>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <form id="profileForm" class="container">
+      <h1><i class="fas fa-user-circle"></i> Your Profile</h1>
+
+
+      
+      <div class="profile-photo-section spaced-layout">
+        <div class="player-stats">
+          <p><strong>Player ID:</strong> <span class="stat-value" id="userIdStat">-</span></p>
+          <p><strong>Strength:</strong></p>
+          <div class="stars" id="strengthStars">
+            ★★★★★☆☆☆☆☆ <span class="strength-label" id="strengthLabel">(5 / 10)</span>
+          </div>
+          <p><strong>Winning Matches:</strong> <span class="stat-value" id="wins">0</span></p>
+          <p><strong>Lost Matches:</strong> <span class="stat-value" id="losses">0</span></p>
+          <p><strong>Total Matches:</strong> <span id="totalMatches">0</span></p>
+        </div>
+      
+        <div class="photo-wrapper">
+          <img id="profilePreview" src="" alt="Profile Photo" />
+          <label for="profilePhoto" class="upload-label">Upload Profile Photo:</label>
+        
+          <label for="profilePhoto" class="custom-file-label">Choose File</label>
+          <input type="file" id="profilePhoto" accept="image/*" />
+          <span id="fileNameDisplay">No file chosen</span>
+        </div>
+        
+      </div>
+      
+
+      
+
+      <!-- Editable Fields -->
+      <div class="form-group">
+        <label for="userName">Full Name:</label>
+        <input type="text" id="userName" placeholder="Full Name" />
+      </div>
+
+      <div class="form-group">
+        <label for="userBirthday">Birthday:</label>
+        <input type="date" id="userBirthday" name="userBirthday" />
+      </div>
+
+      <div class="form-group">
+        <label for="userGender">Gender:</label>
+        <select id="userGender" name="userGender">
+          <option value="">Select gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="userEmail">Email:</label>
+        <input type="email" id="userEmail" placeholder="Email" />
+      </div>
+
+      <div class="form-group">
+        <label for="userLocation">Location:</label>
+        <input type="text" id="userLocation" placeholder="Location" />
+      </div>
+
+      <div class="form-group">
+        <label for="phone_number">Your Phone Number:</label>
+        <div class="phone-group">
+          <div class="custom-dropdown">
+            <button type="button" id="selected-country" class="dropdown-btn">
+              <img src="assets/flags/us.png" class="flag-icon"> +1
+            </button>
+            <div class="dropdown-content">
+              <input type="text" id="search-country" placeholder="Search country..." class="dropdown-search">
+              <div id="country-list">
+                <div class="dropdown-item" data-code="+1" data-flag="us">
+                  <img src="assets/flags/us.png" class="flag-icon" alt="US"> +1 (USA)
+                </div>
+                <div class="dropdown-item" data-code="+44" data-flag="gb">
+                  <img src="assets/flags/gb.png" class="flag-icon" alt="UK"> +44 (UK)
+                </div>
+                <div class="dropdown-item" data-code="+91" data-flag="in">
+                  <img src="assets/flags/in.png" class="flag-icon" alt="India"> +91 (India)
+                </div>
+                <div class="dropdown-item" data-code="+974" data-flag="qa">
+                  <img src="assets/flags/qa.png" class="flag-icon" alt="Qatar"> +974 (Qatar)
+                </div>
+              </div>
+            </div>
+          </div>
+          <input type="tel" id="phone_number" name="phone_number" placeholder="Enter phone number" required />
+          <input type="hidden" id="country_code" name="country_code" value="+1" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="newPassword">New Password:</label>
+        <input type="password" id="newPassword" placeholder="Enter new password" />
+        <small style="color: gray;">Leave blank if you don't want to change the password.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" placeholder="Confirm new password" />
+      </div>
+
+      <div class="button-group">
+        <button type="submit" class="update-button">Update Profile</button>
+        <button type="button" id="logoutBtn" class="logout-button">Logout</button>
+      </div>
+    </form>
+  </main>
+
+  <!-- Modal -->
+  <div id="customModal" class="modal-overlay">
+    <div class="modal-box">
+      <p id="modalMessage"></p>
+      <div id="modalActions" class="modal-buttons"></div>
+      <button id="closeModalBtn">Close</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 MatchPoint. All Rights Reserved.</p>
+  </footer>
+
+  <script src="profile.js"></script>
+</body>
+</html>

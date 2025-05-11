@@ -1,0 +1,406 @@
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom right, #004aad, #7fa9d7);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+/* === Container === */
+.container {
+    width: 55%;
+    margin: 50px auto 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.2);
+  }
+  
+/* === Header === */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: linear-gradient(to right, #003c9e, #005bda);
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  .site-logo {
+    height: 50px;
+    margin-right: 20px;
+    border-radius: 15px;
+  }
+  
+  .page-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+
+  main.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: auto;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #004aad;
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+  
+  .page-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  /* === Form === */
+  .form-group {
+    margin: 20px 0;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    color: #004aad;
+    text-align: left;
+    font-size: 18px;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group button {
+    width: 100%;
+    padding: 14px;
+    margin: 6px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .form-group button {
+    background-color: #004aad;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .form-group button:hover {
+    background-color: #00388d;
+  }
+  
+  /* === Phone Input Dropdown === */
+  .phone-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .custom-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-btn {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+  }
+  
+  .flag-icon {
+    width: 24px;
+    height: 16px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #ddd;
+    width: 200px;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 10;
+    font-size: 16px;
+  }
+  
+  .dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .dropdown-item:hover {
+    background: #f0f0f0;
+  }
+  
+  .custom-dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* === Modal === */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-box {
+    background-color: #004aad;
+    padding: 35px;
+    border-radius: 12px;
+    text-align: center;
+    width: 340px;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
+  }
+  
+  .modal-box p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .modal-box button {
+    background-color: #00388d;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .modal-box button:hover {
+    background-color: #002f7a;
+  }
+  
+ /* === Navigation Menu === */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-right: 266px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 36px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+  /* === Logout Button === */
+  .logout-button {
+    background-color: #d32212;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-button:hover {
+    background-color: #75150d;
+  }
+  
+/* === Update Button === */
+.update-button {
+    background-color: #004aad;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .update-button:hover {
+    background-color: #002f7a;
+  }
+
+  /* === Footer === */
+  footer {
+    background-color: #004aad;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .navbar-underline {
+    height: 5px;
+    background-color: #7cc122; /* lime green */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .site-logo {
+    height: 50px;
+    margin-right: 20px;
+    border-radius: 15px;
+  }
+  .profile-photo-section.spaced-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 30px;
+  }
+  
+  .player-stats {
+    flex: 1;
+    min-width: 200px;
+    text-align: left;
+    font-size: 16px;
+  }
+  
+  .player-stats p {
+    margin: 8px 0;
+    font-weight: bold;
+    color: #004aad;
+  }
+  
+  .player-stats .stat-value {
+    font-weight: normal;
+    color: #333;
+  }
+  
+  .stars {
+    font-size: 20px;
+    color: gold;
+  }
+  
+  .strength-label {
+    font-size: 14px;
+    color: #555;
+    margin-left: 5px;
+  }
+  
+  .photo-wrapper {
+    text-align: right;
+    min-width: 160px;
+    max-width: 180px;
+  }
+  
+  .photo-wrapper img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #0073e6;
+    margin-bottom: 10px;
+  }
+  
+  .upload-label {
+    display: block;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: right;
+  }
+  
+/* Hide default file input */
+#profilePhoto {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+    z-index: -1;
+  }
+  
+  /* Style the custom button */
+  .custom-file-label {
+    display: inline-block;
+    background-color: #5a5757;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* Show file name */
+  #fileNameDisplay {
+    display: block;
+    margin-top: 6px;
+    color: black;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .player-stats .stat-value,
+#userIdStat,
+#strengthLabel,
+#wins,
+#losses,
+#totalMatches {
+    font-weight: bold;
+    color: #000; /* Optional: make it darker if needed */
+}
+
+
+
+  
+  
+  
+
+  

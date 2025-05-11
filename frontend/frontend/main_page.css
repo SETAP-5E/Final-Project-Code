@@ -1,0 +1,147 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom right, #004aad, #7fa9d7);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  
+  /* === Header === */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 27px 30px;
+    background: linear-gradient(to right, #003c9e, #005bda);
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  .site-logo {
+    height: 50px;
+    margin-right: 20px;
+    border-radius: 15px;
+  }
+  
+  .page-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top:7px;
+  }
+  
+  /* === Main Layout === */
+  .main-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+  }
+  
+  /* === Button Grid === */
+  ul.main-links,
+  ul.main-links-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    width: 90%;
+    max-width: 800px;
+  }
+
+
+ul.main-links-grid{
+    margin-top:-450px;
+}
+
+  ul.main-links li,
+  ul.main-links-grid li {
+    text-align: center;
+  }
+  
+  ul.main-links a,
+  ul.main-links-grid a {
+    text-decoration: none;
+    font-size: 22px;
+    color: #004aad;
+    background-color: white;
+    width: 220px;
+    height: 80px;
+    padding: 20px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    text-align: center;
+    margin: auto;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Soft elegant shadow */
+  }
+  
+  ul.main-links a:hover,
+  ul.main-links-grid a:hover {
+    background-color: #d6ded7; 
+    transform: translateY(-5px);
+  }
+  
+  footer {
+    background-color: #004aad;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 18px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; 
+  }
+  
+  .navbar-underline {
+    height: 5px;
+    background-color: #7cc122; /* lime green */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* === Navigation Menu === */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-right: 450px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 36px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+  
